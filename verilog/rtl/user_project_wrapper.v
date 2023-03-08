@@ -82,7 +82,9 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-FFTSPIMinionRTL fftspi (.clk(wb_clk_i), .reset(wb_rst_i), .cs(io_in[0]), .cs_2(io_in[1]), .miso(io_out[8]), .miso_2(io_out[9]), .mosi(io_in[2]), .mosi_2(io_in[3]), .sclk(io_in[4]), .sclk_2(io_in[5]));
+FFTSPIMinionRTL fftspi (
+
+    .clk(wb_clk_i), .reset(wb_rst_i), .cs(io_in[5]), cs_2(io_in[6]), .miso(io_out[8]), .miso_2(io_out[9]), .mosi(io_in[7]), .mosi_2(io_in[10]), .sclk(io_in[11]), .sclk_2(io_in[12]), .io_oeb(io_oeb[8:7]));
 
 endmodule	// user_project_wrapper
 
